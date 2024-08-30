@@ -765,10 +765,10 @@ console.log(svgDoc);
                 }
 
                 const elements = svgDoc.querySelectorAll(`.clickable-area[data-id='${id}']`);
-                console.log(elements);
                 
-
+                
                 if (elements && id) {
+                    console.log(elements);
                     if (currentHighlightedElement && currentHighlightedElement !== elements) {
                         resetElement(currentHighlightedElement);
                     }
