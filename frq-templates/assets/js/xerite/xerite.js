@@ -747,8 +747,10 @@ const colors = {
     let currentHighlightedElement = null;
 
     const svgDoc = objectElement.contentDocument;
+    console.log(svgDoc);
+    
     // objectElement.addEventListener('load', () => {
-    if (svgDoc) {
+    // if (svgDoc) {
         const clickableAreas = svgDoc.querySelectorAll('.clickable-area');
 
         clickableAreas.forEach(area => {
@@ -828,7 +830,7 @@ const colors = {
                 }
             }
         });
-    }
+    // }
 
 
     function highlightElement(elements, id) {
