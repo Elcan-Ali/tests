@@ -1,12 +1,12 @@
 
 //colors array is fake data array,just fetch your api here and assign data to colors,also change properties' name based on data
 
-let a = localStorage.hasOwnProperty("optimization") ? false : true
+let a = sessionStorageStorage.hasOwnProperty("optimization") ? false : true
 
 if (a) {
     location.reload();
-    localStorage.setItem("optimization", false);
-    a = localStorage.getItem("optimization");
+    sessionStorage.setItem("optimization", false);
+    a = sessionStorage.getItem("optimization");
 }
 
 
