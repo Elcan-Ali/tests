@@ -746,12 +746,12 @@ const detailsOverlay = document.querySelector('.details-overlay');
 const detailsContent = document.querySelector('.details-content');
 let currentHighlightedElement = null;
 
-const svgDoc = objectElement.contentDocument;
+const svgDoc = objectElement.contentDocument 
+console.log(svgDoc);
 
 // objectElement.addEventListener('load', () => {
     if (svgDoc) {
         const clickableAreas = svgDoc.querySelectorAll('.clickable-area');
-        console.log(svgDoc);
 
     clickableAreas.forEach(area => {
         if (window.innerWidth > 992) {
@@ -765,6 +765,8 @@ const svgDoc = objectElement.contentDocument;
                 }
 
                 const elements = svgDoc.querySelectorAll(`.clickable-area[data-id='${id}']`);
+                console.log(elements);
+                
 
                 if (elements && id) {
                     if (currentHighlightedElement && currentHighlightedElement !== elements) {
