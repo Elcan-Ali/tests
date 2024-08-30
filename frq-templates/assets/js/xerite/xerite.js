@@ -1,13 +1,13 @@
 
 //colors array is fake data array,just fetch your api here and assign data to colors,also change properties' name based on data
 
-let a = sessionStorageStorage.hasOwnProperty("optimization") ? false : true
+// let a = sessionStorageStorage.hasOwnProperty("optimization") ? false : true
 
-if (a) {
-    location.reload();
-    sessionStorage.setItem("optimization", false);
-    a = sessionStorage.getItem("optimization");
-}
+// if (a) {
+//     location.reload();
+//     sessionStorage.setItem("optimization", false);
+//     a = sessionStorage.getItem("optimization");
+// }
 
 
 const colors = {
@@ -854,6 +854,9 @@ const colors = {
     }
 
     function showInfoBox(elements, id, event) {
+
+        console.log("kjkkk");
+        
 
         infoBox.style.display = 'block';
 
