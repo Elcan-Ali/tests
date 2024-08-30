@@ -747,11 +747,11 @@ const detailsContent = document.querySelector('.details-content');
 let currentHighlightedElement = null;
 
 const svgDoc = objectElement.contentDocument;
-console.log(svgDoc);
 
 // objectElement.addEventListener('load', () => {
-if (svgDoc) {
-    const clickableAreas = svgDoc.querySelectorAll('.clickable-area');
+    if (svgDoc) {
+        const clickableAreas = svgDoc.querySelectorAll('.clickable-area');
+        console.log(svgDoc);
 
     clickableAreas.forEach(area => {
         if (window.innerWidth > 992) {
@@ -831,6 +831,7 @@ if (svgDoc) {
         }
     });
 } else { location.reload() }
+// location.reload()
 
 
 function highlightElement(elements, id) {
