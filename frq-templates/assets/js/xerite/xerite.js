@@ -729,7 +729,7 @@ const colors = {
 
 
 
-document.addEventListener('DOMContentLoaded', () => {
+// document.addEventListener('DOMContentLoaded', () => {
     const objectElement = document.getElementById('mySvg');
     const infoBox = document.getElementById('info-box');
     const detailsOverlay = document.querySelector('.details-overlay');
@@ -1190,7 +1190,7 @@ document.addEventListener('DOMContentLoaded', () => {
         detailsOverlay.classList.remove('show');
         resetElement(Array.from(svgDoc.querySelectorAll('.clickable-area')).filter(area => area.style))
     });
-});
+// });
 
 
 function adjustCityDivWidth() {
