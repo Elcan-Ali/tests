@@ -1,14 +1,27 @@
 
 //colors array is fake data array,just fetch your api here and assign data to colors,also change properties' name based on data
-
+const objectElement = document.getElementById('mySvg');
 let a = sessionStorage.hasOwnProperty("optimization") ? false : true
+const loading = document.querySelector(".loading")
+const svgDoc = objectElement.contentDocument;
+const svgWrapper = document.querySelector(".mySvgWrapper");
+
+
+
+
+
 
 if (a) {
+    loading.style.display = "block" 
+    svgWrapper.style.display= "none"
     location.reload();
     sessionStorage.setItem("optimization", false);
     a = sessionStorage.getItem("optimization");
 }
-
+else{
+    loading.style.display = "none" 
+    svgWrapper.style.display= "block"
+}
 
 const colors = {
     2: {
@@ -740,13 +753,11 @@ const colors = {
 
 
 // document.addEventListener('DOMContentLoaded', () => {
-    const objectElement = document.getElementById('mySvg');
     const infoBox = document.getElementById('info-box');
     const detailsOverlay = document.querySelector('.details-overlay');
     const detailsContent = document.querySelector('.details-content');
     let currentHighlightedElement = null;
 
-    const svgDoc = objectElement.contentDocument;
     // objectElement.addEventListener('load', () => {
     if (svgDoc) {
         const clickableAreas = svgDoc.querySelectorAll('.clickable-area');
